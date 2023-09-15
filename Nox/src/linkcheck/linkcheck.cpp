@@ -5,7 +5,7 @@ namespace Nox {
 
 	void CheckDllLinking() 
 	{
-		printf("Nox Engine has been linked succesfully!");
+		printf("DLL para Nox Engine ha sido vinculado correctamente!");
 	}
 
 }

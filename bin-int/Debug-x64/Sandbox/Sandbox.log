@@ -1,3 +1,2 @@
-﻿  Application.cpp
-D:\esteban-dev\Proyectos\Nox\Sandbox\src\Application.cpp(6,1): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+﻿  SandboxApp.cpp
   Sandbox.vcxproj -> D:\esteban-dev\Proyectos\Nox\\bin\Debug-x64\Sandbox\Sandbox.exe
