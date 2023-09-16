@@ -5,7 +5,7 @@ namespace Nox {
 }
 
 //La clase Sandbox es la clase cliente que hereda de nuestra clase App que contiene el Engine.
-class Sandbox : public Nox::App
+class Sandbox : public Nox::App //La herencia pública significa que la clase Sandbox heredará todos los miembros públicos de la clase base Nox::App.
 {
 public:
 	Sandbox()

@@ -1,2 +1,10 @@
-﻿  linkcheck.cpp
+﻿  Log.cpp
+D:\esteban-dev\Proyectos\Nox\Nox\src\NOX\LogSystem\Log.h(28,54): warning C4251: 'Nox::Log::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Nox::Log'
+D:\esteban-dev\Proyectos\Nox\Nox\vendor\spdlog\include\spdlog\details\registry.h(34): message : vea la declaración de 'std::shared_ptr<spdlog::logger>'
+D:\esteban-dev\Proyectos\Nox\Nox\src\NOX\LogSystem\Log.h(29,56): warning C4251: 'Nox::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Nox::Log'
+D:\esteban-dev\Proyectos\Nox\Nox\vendor\spdlog\include\spdlog\details\registry.h(34): message : vea la declaración de 'std::shared_ptr<spdlog::logger>'
+  App.cpp
+  linkcheck.cpp
+  Generando código...
+     Creando biblioteca D:\esteban-dev\Proyectos\Nox\\bin\Debug-x64\Nox\Nox.lib y objeto D:\esteban-dev\Proyectos\Nox\\bin\Debug-x64\Nox\Nox.exp
   Nox.vcxproj -> D:\esteban-dev\Proyectos\Nox\\bin\Debug-x64\Nox\Nox.dll

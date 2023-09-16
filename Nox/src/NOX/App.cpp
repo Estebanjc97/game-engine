@@ -8,8 +8,9 @@ namespace Nox {
 	App::~App()
 	{
 	}
+
 	void App::Run()
 	{
-		while (true);
+		while (true); //Este bucle se ejecutará continuamente sin detenerse hasta que se interrumpa manualmente o se termine el programa.
 	}
 }

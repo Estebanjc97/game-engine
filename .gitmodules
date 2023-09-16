@@ -1,0 +1,3 @@
+[submodule "Nox/vendor/spdlog"]
+	path = Nox/vendor/spdlog
+	url = https://github.com/gabime/spdlog
