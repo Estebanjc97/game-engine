@@ -9,7 +9,7 @@ class Sandbox : public Nox::App //La herencia pública significa que la clase San
 {
 public:
 	Sandbox()
-	{
+	{ 
 
 	}
 
@@ -23,5 +23,5 @@ public:
 //Toda app que quiera usar nuestro engine debera implementar esta funcion
 Nox::App* Nox::CreateApp()
 {
-	return new Sandbox();
+	return new Sandbox(); //Retorno de un nuevo objeto en el heap
 }

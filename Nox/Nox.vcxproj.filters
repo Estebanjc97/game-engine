@@ -1,48 +1,47 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de origen">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="NOX">
+      <UniqueIdentifier>{3A09880B-A612-887C-2F8E-9E7C9B96937C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="NOX\LogSystem">
+      <UniqueIdentifier>{F0156F15-5CD6-EA4B-2511-34C991902F28}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="linkcheck">
+      <UniqueIdentifier>{B1D9F411-1D44-A988-6682-5A2ED22B87DD}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\linkcheck\linkcheck.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="src\NOX\App.h">
+      <Filter>NOX</Filter>
     </ClInclude>
     <ClInclude Include="src\NOX\Core.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="src\NOX\App.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Nox.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>NOX</Filter>
     </ClInclude>
     <ClInclude Include="src\NOX\EntryPoint.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>NOX</Filter>
     </ClInclude>
     <ClInclude Include="src\NOX\LogSystem\Log.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>NOX\LogSystem</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nox.h" />
+    <ClInclude Include="src\linkcheck\linkcheck.h">
+      <Filter>linkcheck</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NOX\EventSystem\Event.h" />
+    <ClInclude Include="src\NOX\EventSystem\KeyEvent.h" />
+    <ClInclude Include="src\NOX\EventSystem\MouseEvent.h" />
+    <ClInclude Include="src\NOX\EventSystem\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\linkcheck\linkcheck.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="src\NOX\App.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>NOX</Filter>
     </ClCompile>
     <ClCompile Include="src\NOX\LogSystem\Log.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>NOX\LogSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\linkcheck\linkcheck.cpp">
+      <Filter>linkcheck</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

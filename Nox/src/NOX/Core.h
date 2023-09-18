@@ -11,3 +11,8 @@
 #else
 	#error Nox only support Windows 
 #endif // NOX_PLATFORM_WINDOWS
+
+//La macro #define BIT(x) (1 << x) es una construcción común en C++ que se utiliza para crear máscaras de bits. 
+//Lo que hace esta macro es desplazar el número 1 a la izquierda en la cantidad de posiciones especificadas por x. 
+//En otras palabras, crea un valor en el que solo el bit en la posición x está establecido en 1, mientras que todos los demás bits están en 0.
+#define BIT(x) (1 << x)
