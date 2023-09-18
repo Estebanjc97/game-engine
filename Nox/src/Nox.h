@@ -3,11 +3,12 @@
 
 #pragma once
 
-#include <stdio.h>
 //---------------------Nox Engine------------------------
 #include "NOX/App.h"
 //---------------------Entry Point-----------------------
 #include "NOX/EntryPoint.h"
 //---------------------Logger----------------------------
 #include "NOX/LogSystem/Log.h"
+//---------------------Event System----------------------
+#include "NOX/EventSystem/Event.h"
 //-------------------------------------------------------

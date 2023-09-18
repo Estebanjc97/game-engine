@@ -40,6 +40,7 @@
       <Filter>NOX\LogSystem</Filter>
     </ClInclude>
     <ClInclude Include="src\Nox.h" />
+    <ClInclude Include="src\Noxpch.h" />
     <ClInclude Include="src\linkcheck\linkcheck.h">
       <Filter>linkcheck</Filter>
     </ClInclude>
@@ -51,6 +52,7 @@
     <ClCompile Include="src\NOX\LogSystem\Log.cpp">
       <Filter>NOX\LogSystem</Filter>
     </ClCompile>
+    <ClCompile Include="src\Noxsph.cpp" />
     <ClCompile Include="src\linkcheck\linkcheck.cpp">
       <Filter>linkcheck</Filter>
     </ClCompile>

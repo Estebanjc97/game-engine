@@ -2,9 +2,6 @@
 
 #include "NOX/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Nox {
 
 	//En una primera etapa, los eventos seran inmediatamente enviados y tendran que ser manejados en el momento en el que se activan (ocurre inmediatamente).

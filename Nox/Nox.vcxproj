@@ -76,7 +76,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Noxpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NOX_PLATFORM_WINDOWS;NOX_BUILD_DLL;NOX_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -96,7 +97,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Noxpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NOX_PLATFORM_WINDOWS;NOX_BUILD_DLL;NOX_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -120,7 +122,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Noxpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NOX_PLATFORM_WINDOWS;NOX_BUILD_DLL;NOX_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -152,11 +155,15 @@
     <ClInclude Include="src\NOX\EventSystem\MouseEvent.h" />
     <ClInclude Include="src\NOX\LogSystem\Log.h" />
     <ClInclude Include="src\Nox.h" />
+    <ClInclude Include="src\Noxpch.h" />
     <ClInclude Include="src\linkcheck\linkcheck.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NOX\App.cpp" />
     <ClCompile Include="src\NOX\LogSystem\Log.cpp" />
+    <ClCompile Include="src\Noxsph.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="src\linkcheck\linkcheck.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

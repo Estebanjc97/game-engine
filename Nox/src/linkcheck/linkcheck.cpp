@@ -1,3 +1,4 @@
+#include "Noxpch.h"
 #include "linkcheck.h"
 #include <stdio.h>
 

@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Nox {
 
 	class NOX_API WindowResizeEvent : public Event

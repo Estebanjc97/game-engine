@@ -1,3 +1,5 @@
+#include "Noxpch.h"
+
 #include "App.h"
 
 #include "NOX/EventSystem/ApplicationEvent.h"

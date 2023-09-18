@@ -21,6 +21,9 @@ project "Nox"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "Noxpch.h"
+    pchsource "Nox/src/Noxsph.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",
