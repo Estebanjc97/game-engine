@@ -33,15 +33,15 @@ namespace Nox {
 	{
 	public:
 		WindowCloseEvent() {}
-		EVENT_CLASS_TYPE(WindowClosed)
+		EVENT_CLASS_TYPE(WindowClose)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class NOX_API AppTrickEvent : public Event
+	class NOX_API AppTickEvent : public Event
 	{
 	public:
-		AppTrickEvent() {}
-		EVENT_CLASS_TYPE(AppTrick)
+		AppTickEvent() {}
+		EVENT_CLASS_TYPE(AppTick)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 

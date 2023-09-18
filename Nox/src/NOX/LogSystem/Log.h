@@ -2,9 +2,10 @@
 
 //Esta clase sera la abstraccion de la libreria spdlog que usaremos para todos los registros (Logs) de nuestro engine
 
-#include "../Core.h" //Recordatorio > para usar NOX_API debes incluir Core!
+#include "NOX/Core.h" //Recordatorio > para usar NOX_API debes incluir Core!
 #include "spdlog/spdlog.h"
 #include <memory>
+#include "spdlog/fmt/ostr.h"
 
 //El sistema contara con dos niveles de registros (Logs) > Uno para el Engine y otro para la app. Un ejemplo son los logs que ves en el editor del engine vs los log del dispositivo que corre la app desarrollada con el engine.
 

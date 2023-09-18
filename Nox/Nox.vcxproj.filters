@@ -4,6 +4,9 @@
     <Filter Include="NOX">
       <UniqueIdentifier>{3A09880B-A612-887C-2F8E-9E7C9B96937C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="NOX\EventSystem">
+      <UniqueIdentifier>{F0F51FDB-5C81-8D9F-6592-1094D19CE99F}</UniqueIdentifier>
+    </Filter>
     <Filter Include="NOX\LogSystem">
       <UniqueIdentifier>{F0156F15-5CD6-EA4B-2511-34C991902F28}</UniqueIdentifier>
     </Filter>
@@ -21,6 +24,18 @@
     <ClInclude Include="src\NOX\EntryPoint.h">
       <Filter>NOX</Filter>
     </ClInclude>
+    <ClInclude Include="src\NOX\EventSystem\ApplicationEvent.h">
+      <Filter>NOX\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NOX\EventSystem\Event.h">
+      <Filter>NOX\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NOX\EventSystem\KeyEvent.h">
+      <Filter>NOX\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NOX\EventSystem\MouseEvent.h">
+      <Filter>NOX\EventSystem</Filter>
+    </ClInclude>
     <ClInclude Include="src\NOX\LogSystem\Log.h">
       <Filter>NOX\LogSystem</Filter>
     </ClInclude>
@@ -28,10 +43,6 @@
     <ClInclude Include="src\linkcheck\linkcheck.h">
       <Filter>linkcheck</Filter>
     </ClInclude>
-    <ClInclude Include="src\NOX\EventSystem\Event.h" />
-    <ClInclude Include="src\NOX\EventSystem\KeyEvent.h" />
-    <ClInclude Include="src\NOX\EventSystem\MouseEvent.h" />
-    <ClInclude Include="src\NOX\EventSystem\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NOX\App.cpp">

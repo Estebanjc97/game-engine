@@ -1,6 +1,8 @@
 #pragma once
 #include "Core.h"
 
+#include "NOX/EventSystem/Event.h"
+
 namespace Nox {
 	
 	class NOX_API App
