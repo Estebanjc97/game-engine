@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "NOX/LogSystem/Log.h"
+
 #ifdef NOX_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif // NOX_PLATFORM_WINDOWS

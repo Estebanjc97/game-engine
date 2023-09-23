@@ -8,6 +8,7 @@
 namespace Nox {
 	App::App()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	App::~App()
@@ -16,9 +17,9 @@ namespace Nox {
 
 	void App::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		NOX_TRACE(e);
-
-		while (true); //Este bucle se ejecutará continuamente sin detenerse hasta que se interrumpa manualmente o se termine el programa.
+		while (m_Running) 
+		{
+			m_Window->OnUpdate();
+		}
 	}
 }

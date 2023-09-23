@@ -10,8 +10,14 @@ workspace "Nox"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Inlcuire las rutas relativas a cada carpeta en un directorio
+IncludeDir = {}
+IncludeDir["GLFW"] = "Nox/vendor/GLFW/include"
+
 -- Establecer Sandbox como el proyecto de inicio
 startproject "Sandbox"
+
+include "Nox/vendor/GLFW"
 
 project "Nox"
     location "Nox"
@@ -33,7 +39,14 @@ project "Nox"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
@@ -49,7 +62,8 @@ project "Nox"
 
         postbuildcommands
         {
-            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+            "{MKDIR} ../bin/" .. outputdir .. "/Sandbox", -- Crea la carpeta si no existe
+            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox") -- Copia y pega el archivo Nox.dll (El engine) dentro de la Carpeta Sandbox
         }
 
     filter "configurations:Debug"

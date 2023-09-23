@@ -44,6 +44,8 @@
     <ClInclude Include="src\linkcheck\linkcheck.h">
       <Filter>linkcheck</Filter>
     </ClInclude>
+    <ClInclude Include="src\NOX\Window\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NOX\App.cpp">
@@ -56,5 +58,6 @@
     <ClCompile Include="src\linkcheck\linkcheck.cpp">
       <Filter>linkcheck</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
