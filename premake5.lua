@@ -28,7 +28,7 @@ project "Nox"
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
     pchheader "Noxpch.h"
-    pchsource "Nox/src/Noxsph.cpp"
+    pchsource "Nox/src/Noxpch.cpp"
 
     files
     {
@@ -68,14 +68,17 @@ project "Nox"
 
     filter "configurations:Debug"
         defines "NOX_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "NOX_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "NOX_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 project "Sandbox"
@@ -115,12 +118,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "NOX_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "NOX_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "NOX_DIST"
+        buildoptions "/MD"
         optimize "On"

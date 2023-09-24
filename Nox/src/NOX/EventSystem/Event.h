@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Noxpch.h"
+
 #include "NOX/Core.h"
 
 namespace Nox {
@@ -34,7 +36,7 @@ namespace Nox {
 
 	class NOX_API Event
 	{
-		friend class EventDispatcher; //La declaración de fried permite que una clase otorgue permisos especiales a otra para acceder a sus miembros que normalmente serían inaccesibles.
+		friend class EventDispatcher; //La declaración de friend permite que una clase otorgue permisos especiales a otra para acceder a sus miembros que normalmente serían inaccesibles.
 	public:
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
@@ -47,10 +49,7 @@ namespace Nox {
 		{
 			return GetCategoryFlags() & category;
 		}
-
-	protected:
-		bool m_Handled = false;
-
+		bool Handled = false;
 	};
 
 	//El despachador de eventos es una clase en base a templates ya que cada despachador sera construido de acuerdo a un tipo de evento
@@ -69,7 +68,7 @@ namespace Nox {
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event);
+				m_Event.Handled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;

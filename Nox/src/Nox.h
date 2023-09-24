@@ -11,4 +11,6 @@
 #include "NOX/LogSystem/Log.h"
 //---------------------Event System----------------------
 #include "NOX/EventSystem/Event.h"
+//---------------------Layer System----------------------
+#include "NOX/LayerSystem/Layer.h"
 //-------------------------------------------------------

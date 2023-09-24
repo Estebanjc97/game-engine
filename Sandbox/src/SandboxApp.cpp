@@ -1,8 +1,21 @@
 #include <Nox.h>
 
-namespace Nox {
-	NOX_API void CheckDllLinking();
-}
+class ExampleLayer : public Nox::Layer
+{
+public:
+	ExampleLayer() : Layer("Example") {};
+
+	void OnUpdate() override
+	{
+		NOX_INFO("Example layer :: Update");
+	}
+
+	void OnEvent(Nox::Event& event) override 
+	{
+		NOX_INFO("{0}", event);
+	}
+
+};
 
 //La clase Sandbox es la clase cliente que hereda de nuestra clase App que contiene el Engine.
 class Sandbox : public Nox::App //La herencia pública significa que la clase Sandbox heredará todos los miembros públicos de la clase base Nox::App.
@@ -10,7 +23,7 @@ class Sandbox : public Nox::App //La herencia pública significa que la clase San
 public:
 	Sandbox()
 	{ 
-
+		PushLayer(new ExampleLayer());
 	}
 
 	~Sandbox()

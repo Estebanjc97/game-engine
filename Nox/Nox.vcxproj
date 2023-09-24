@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -110,6 +111,7 @@ IF EXIST ..\bin\Debug-windows-x86_64\Nox\Nox.dll\ (xcopy /Q /E /Y /I ..\bin\Debu
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -137,6 +139,7 @@ IF EXIST ..\bin\Release-windows-x86_64\Nox\Nox.dll\ (xcopy /Q /E /Y /I ..\bin\Re
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -159,21 +162,25 @@ IF EXIST ..\bin\Dist-windows-x86_64\Nox\Nox.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-
     <ClInclude Include="src\NOX\EventSystem\Event.h" />
     <ClInclude Include="src\NOX\EventSystem\KeyEvent.h" />
     <ClInclude Include="src\NOX\EventSystem\MouseEvent.h" />
+    <ClInclude Include="src\NOX\LayerSystem\Layer.h" />
+    <ClInclude Include="src\NOX\LayerSystem\LayerStack.h" />
     <ClInclude Include="src\NOX\LogSystem\Log.h" />
+    <ClInclude Include="src\NOX\Window\Window.h" />
     <ClInclude Include="src\Nox.h" />
     <ClInclude Include="src\Noxpch.h" />
-    <ClInclude Include="src\linkcheck\linkcheck.h" />
-    <ClInclude Include="src\NOX\Window\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\linkcheck\linkcheck.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NOX\App.cpp" />
+    <ClCompile Include="src\NOX\LayerSystem\Layer.cpp" />
+    <ClCompile Include="src\NOX\LayerSystem\LayerStack.cpp" />
     <ClCompile Include="src\NOX\LogSystem\Log.cpp" />
-    <ClCompile Include="src\Noxsph.cpp">
+    <ClCompile Include="src\Noxpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="src\linkcheck\linkcheck.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\linkcheck\linkcheck.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
