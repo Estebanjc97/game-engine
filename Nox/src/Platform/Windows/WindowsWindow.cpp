@@ -5,6 +5,8 @@
 #include "NOX/EventSystem/KeyEvent.h"
 #include "NOX/EventSystem/MouseEvent.h"
 
+#include <glad/glad.h>
+
 namespace Nox
 {
 	static bool s_GLFWInitialized = false;
@@ -47,6 +49,8 @@ namespace Nox
 
 		m_Window = glfwCreateWindow(props.Width, props.Height, props.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		NOX_CORE_ASSERT(status, "Failed to initialized Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_WindowData);
 		SetVSync(true);
 

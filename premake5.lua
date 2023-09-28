@@ -13,11 +13,13 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Inlcuire las rutas relativas a cada carpeta en un directorio
 IncludeDir = {}
 IncludeDir["GLFW"] = "Nox/vendor/GLFW/include"
+IncludeDir["Glad"] = "Nox/vendor/Glad/include"
 
 -- Establecer Sandbox como el proyecto de inicio
 startproject "Sandbox"
 
 include "Nox/vendor/GLFW"
+include "Nox/vendor/Glad"
 
 project "Nox"
     location "Nox"
@@ -40,12 +42,14 @@ project "Nox"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -57,7 +61,8 @@ project "Nox"
         defines
         {
             "NOX_PLATFORM_WINDOWS",
-            "NOX_BUILD_DLL"
+            "NOX_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands
